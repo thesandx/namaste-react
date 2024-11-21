@@ -6,19 +6,37 @@
     <title>Namste react</title>
 </head>
 <body>
-    <div id="root">
+    <div id="root-js">
         <h1>Namsate React</h1>
     </div>
     
+    <div id="root">
+        <!-- this is where our react app will be rendered -->
+        <h1>Placeholder, this will be removed by reactDom</h1>
+    </div>
+
 </body>
 
 <script>
-    
+    // element injection using js
     const heading = document.createElement("h1");
     heading.innerHTML = "Namaste React using JS";
-    const root = document.getElementById("root");
-    root.appendChild(heading);
+    const rootJs = document.getElementById("root-js");
+    rootJs.appendChild(heading);
 </script>
+<!--- download React lib using CDN -->
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+    // element injection using react
+    // so React.CreateElement takes 3 lement and returns a object/json
+    const headingReact = React.createElement("h1", {}, "Namaste React using React");
+    console.log(headingReact); // this will return a object
+    // now we need to render this object into the root element
+    // so we will use ReactDOM.createRoot() method.
+    // When you pass a DOM element to createRoot(), such as a div with an id, React takes over that element completely. If there are any pre-existing child elements within that root div, it assumes full control and discards them because React manages its own component tree and rendering process.
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(headingReact);
+</script>
+</script>
 </html>
