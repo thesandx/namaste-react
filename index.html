@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React1</title>
@@ -39,7 +39,10 @@
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
 <!--- order of file is important, so your react code script should come only after you download the react using cdn
 i.e it follows waterfall model. -->
-
+<!-- 
+here wr have to mention that type="module" so that js engine can know that it will have import 
+statement, otherwise you can't use import in App.js, and without import you will get error likw
+Placeholder, this will be removed by reactDom, i.e react will not inject the code in root -->
 <script type="module" src="App.js"></script>
 </script>
 </body>
