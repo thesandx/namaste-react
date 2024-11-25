@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React1</title>
@@ -29,13 +30,17 @@
     const rootJs = document.getElementById("root-js");
     rootJs.appendChild(heading);
 </script>
+
 <!--- download React lib using CDN -->
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!-- now commenting below code to use react via npm
+1. auto version control
+2. fast to fetch from node_modules then cdn server -->
+<!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
 <!--- order of file is important, so your react code script should come only after you download the react using cdn
 i.e it follows waterfall model. -->
 
-<script src="App.js"></script>
+<script type="module" src="App.js"></script>
 </script>
 </body>
 

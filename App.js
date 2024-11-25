@@ -1,9 +1,14 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 // element injection using react
     // so React.CreateElement takes 3 element and returns a object/json
     const headingReact = React.createElement("h1", {id:"title"}, "3. Namaste React using React");
     console.log(headingReact); // this will return a object
 
     //here we get a global variable React which we got from the link which we donwload from cdn link
+    // so React.CreateElement takes 3 element and returns a object/json
+    // so here we pass tag, props{in this json you can psss any attribute which you want to pass to the tag} and children/content
     const heading1 = React.createElement("h1", {id:"heading1"}, "heading1");
     const heading2 = React.createElement("h2", {id:"heading2"}, "heading2");
     // if we want to render multiple elements then we can pass an array of elements to the React.createElement method
